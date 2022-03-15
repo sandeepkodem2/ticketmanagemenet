@@ -1,0 +1,40 @@
+
+{%extends 'apolloapp/home.html' %}
+{%block body%}
+<br>
+
+<table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Title</th>
+        <th scope="col">description</th>
+        <th scope="col">Status</th>
+        
+        <th scope=""></th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for ticket in tlist%}
+      <tr>
+        
+        <td>{{ticket.title}}</td>
+        <td>{{ticket.description}}</td>
+        <td>{{ticket.status}}</td>
+        
+        <td>
+            
+            <a href="{%url 'apolloapp:ticket_delete' ticket.id%}">delete</a>
+        </td>
+        <td>
+            
+            <a href="{%url 'apolloapp:ticket_update' ticket.id%}">update</a>
+        </td>
+      </tr>
+      <tr>
+       {%endfor%} 
+    </tbody>
+  </table>
+    
+    
+{%endblock%}

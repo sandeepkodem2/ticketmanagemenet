@@ -1,0 +1,24 @@
+{%extends 'apolloapp/home.html' %}
+{%load crispy_forms_tags %}
+{%block body%}
+<br>
+<div class="container">
+    <div class = "row">
+    <div class="col-sm-8"></div>
+        
+    <form action="" method="post">
+        {%csrf_token%}
+       
+                           
+                            <div class="col-md-6">
+                            {{form|crispy}}
+                            </div>
+                           
+                            <br><br>
+                            
+        <button class="btn btn-success" type="sumbit">SIGN IN</button>
+            
+    </div>    
+    </div>
+    </div>
+{%endblock%}
