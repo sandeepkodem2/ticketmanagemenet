@@ -1,1 +1,2 @@
 crispy forms           pip install django_crispy-forms
+admin should also log in same as user in login page
